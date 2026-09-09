@@ -13,6 +13,25 @@ npm run migrate
 npm run dev
 ```
 
+## Testing
+
+This project uses [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), and [c8](https://github.com/bcoe/c8) for testing and code coverage.
+
+### Running Tests and Checking Coverage
+
+To execute all tests and generate a code coverage report, use the following command:
+
+```bash
+npm test
+```
+
+This command will run all test files located in the `test/` directory. After execution, an `html` coverage report will be generated in the `coverage` directory (accessible by opening `coverage/index.html` in your browser), and a summary will be printed directly to the console.
+
+### Current Coverage Status
+
+- `src/config.ts`: 100% statement, branch, function, and line coverage.
+- `src/app.ts` and `src/db.ts` currently have no dedicated tests due to challenges with ESM module mocking. This will be addressed in future updates.
+
 ## API
 
 - `GET /health`
