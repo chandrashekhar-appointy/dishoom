@@ -1,0 +1,194 @@
+
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header/Navbar */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #77aaff;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #77aaff;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    min-height: 400px;
+    background: #555 url('https://via.placeholder.com/1500x400/000000/FFFFFF?text=Dishoom+Project') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #77aaff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #5588cc;
+}
+
+/* Features Section */
+#features {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+}
+
+#features h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 30%;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #77aaff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* About Section */
+#about {
+    padding: 40px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+#about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1, header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        padding-top: 10px;
+    }
+
+    header li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        max-width: 90%;
+    }
+}
