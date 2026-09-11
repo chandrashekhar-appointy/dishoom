@@ -1,6 +1,10 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import express from "express";
 import { z } from "zod";
 import { pool } from "./db.js";
+
+const projectRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const dishInputSchema = z.object({
   name: z.string().trim().min(1).max(120),
@@ -108,6 +112,8 @@ app.delete("/dishes/:id", async (request, response, next) => {
     next(error);
   }
 });
+
+app.use(express.static(projectRoot));
 
 app.use(
   (
